@@ -1,0 +1,31 @@
+FUNCTION InsertionSort(arr)
+    VAR
+        n:INTEGER;
+    BEGIN
+        n:= length(arr)
+
+        FOR i = 1 TO n-1 DO
+            key := arr[i]
+            j := i - 1
+
+            WHILE j >= 0 AND arr[j] > key DO
+                arr[j+1] := arr[j]
+                j := j - 1
+            END_WHILE
+
+            arr[j+1] := key
+        END_FOR
+END
+
+
+ALGORITHM InsertionSort_runner
+    VAR
+        numbers:ARRAY_OF INTEGER[6];
+        result:ARRAY_OF INTEGER[6];
+    BEGIN
+        numbers := {2, 4, 1, 9, 3, 5}
+
+        result := sumOfDistinctElements(set1, set2)
+        Write("Numbers are rearranged as:", result)
+    
+END
